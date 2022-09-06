@@ -47,5 +47,6 @@ RSpec.describe 'when visiting the projects show page' do
         expect(page).to have_content(@furniture_challenge.theme)
         expect(page).to have_content("Number of Contestants: 2")
         expect(page).to have_content("Average Contestant Experience: 10 years")
+        save_and_open_page
     end
 end

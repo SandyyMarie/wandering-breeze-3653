@@ -2,3 +2,11 @@
 <p>Material: <%= @projects.material %></p>
 <p>Challenge Theme: <%= @projects.challenge.theme %> </p>
 <p>Number of Contestants: <%= @projects.contestants.count %></p>
+<% acc = 0 %>
+
+<% @projects.contestants.each do |contestant| %> 
+<%acc += contestant.years_of_experience %>
+<% end %>
+<% if @projects.contestants.count > 0 %>
+    <p>Average Contestant Experience: <%= acc / @projects.contestants.count %> years</p>
+<% end %>
